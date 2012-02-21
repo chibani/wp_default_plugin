@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress default plugin
 Plugin URI: https://github.com/chibani/wp_default_plugin
-Description: Not a plugin, it's more a template
+Description: A base for making nice WordPress plugins
 Author: LoicG
 Author URI: http://blog.loicg.net/
  */

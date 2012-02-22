@@ -72,7 +72,7 @@ class wp_default_plugin{
 			</div>
     		<h2>Default plugin</h2>
     		
-    		<?php if (isset($_POST[])) :
+    		<?php if (isset($_POST)) :
 
 	        	//Let's save some actions ...
 	        

@@ -8,7 +8,8 @@ Author URI: http://blog.loicg.net/
  */
 
 
-register_deactivation_hook(__FILE__, array('wp_default_plugin','plugin_desactivation'));
+register_activation_hook(__FILE__, array('wp_default_plugin','plugin_activation'));
+register_deactivation_hook(__FILE__, array('wp_default_plugin','plugin_deactivation'));
 add_action('init', array('wp_default_plugin', 'init'));
 
 class wp_default_plugin{
@@ -132,6 +133,14 @@ class wp_default_plugin{
      */
     public static function delete_option($option_name){
     	return delete_option('wp_default_plugin_'.$option_name);
+    }
+    
+    /**
+     * 
+     * Usually, here, we set-up database tables or default options
+     */
+    public static function plugin_activation(){
+    	//Do nice things
     }
     
     /**

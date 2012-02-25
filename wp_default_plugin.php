@@ -75,7 +75,7 @@ class wp_default_plugin{
     		
     		<?php if (isset($_POST)) :
 
-	        	//Let's save some actions ...
+	        	//Let's save some options ...
 	        
 	            ?>
 	            <div id="setting-error-settings_updated" class="updated settings-error">
@@ -102,6 +102,10 @@ class wp_default_plugin{
 					</tbody>
 				</table>
 			</form>
+    		
+    		<p class="submit">
+            	<input class="button-primary" name="plugin_ok" value="<?php _e('Save settings') ?>" type="submit" />
+            </p>
     		
     	</div>
     		

@@ -1,16 +1,18 @@
-# Copyright (C) 2012 WordPress default plugin
-# This file is distributed under the same license as the WordPress default plugin package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress default plugin \n"
+"Project-Id-Version: WP Default plugin\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp_default_plugin\n"
 "POT-Creation-Date: 2012-03-01 21:03:12+00:00\n"
+"PO-Revision-Date: \n"
+"Last-Translator: LoïcG <gerbaudloic@gmail.com>\n"
+"Language-Team: LoïcG <gerbaudloic@gmail.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2;plural=n>2\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
 
 #: wp_default_plugin.php:67
 msgid "You do not have sufficient permissions to access this page."
@@ -22,23 +24,23 @@ msgstr ""
 
 #: wp_default_plugin.php:95
 msgid "A label"
-msgstr ""
+msgstr "Un titre"
 
 #: wp_default_plugin.php:96
 msgid "In case you want some options ..."
-msgstr ""
+msgstr "Au cas où vous souhaiteriez quelques options ..."
 
 #: wp_default_plugin.php:107
 msgid "Save settings"
-msgstr ""
+msgstr "Enregister les paramètres"
 
 #: wp_default_plugin.php:167
 msgid "Every 10 minutes"
-msgstr ""
+msgstr "Toutes les 10 minutes"
 
 #. Plugin Name of the plugin/theme
 msgid "WordPress default plugin"
-msgstr ""
+msgstr "Plugin par defaut pour WordPress"
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/chibani/wp_default_plugin"
@@ -55,3 +57,4 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://blog.loicg.net/"
 msgstr ""
+

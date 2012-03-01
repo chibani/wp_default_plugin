@@ -71,7 +71,7 @@ class wp_default_plugin{
     		<div id="icon-options-general" class="icon32">
 				<br />
 			</div>
-    		<h2>Default plugin</h2>
+    		<h2><?php _e('WordPress default plugin','wp_default_plugin') ?></h2>
     		
     		<?php if (isset($_POST)) :
 
@@ -92,8 +92,8 @@ class wp_default_plugin{
 					<tbody>
 						<tr valign="top">
 							<th scope="row">
-								<label for=""><?php _e('A label') ?></label><br />
-								<em><?php _e('In case you want some options ...')?></em>
+								<label for=""><?php _e('A label','wp_default_plugin') ?></label><br />
+								<em><?php _e('In case you want some options ...','wp_default_plugin')?></em>
 							</th>
 							<td>
 								<input type="text" name="" id="" value="blablabla" />
@@ -104,7 +104,7 @@ class wp_default_plugin{
 			</form>
     		
     		<p class="submit">
-            	<input class="button-primary" name="plugin_ok" value="<?php _e('Save settings') ?>" type="submit" />
+            	<input class="button-primary" name="plugin_ok" value="<?php _e('Save settings','wp_default_plugin') ?>" type="submit" />
             </p>
     		
     	</div>

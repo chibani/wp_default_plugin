@@ -34,7 +34,7 @@ class wp_default_plugin{
      * The admin hooks
      */
     public static function admin_hooks(){
-    	add_action('admin_menu', array('wp_default_plugin', 'admin_menu'));
+    	include 'wp_default_plugin_main_settings.php';
     	
     	//Add schedules for wp_cron
     	add_filter('cron_schedules', array('wp_default_plugin','custom_cron_schedules'));
@@ -50,96 +50,7 @@ class wp_default_plugin{
     	
     }
     
-    /**
-     * 
-     * Set up the admin menu(s)
-     */
-    public static function admin_menu(){
-    	add_options_page("Default plugin admin page", "Default plugin", 'manage_options', 'wp_default_plugin_settings', array('wp_default_plugin', "admin_settings"));
-    }
-    
-    /**
-     * 
-     * The admin settings page
-     */
-    public static function admin_settings(){
-   		if (!current_user_can('manage_options'))  {
-			wp_die( __('You do not have sufficient permissions to access this page.') );
-		}
-		?>
-		<div class="wrap">
-    		<div id="icon-options-general" class="icon32">
-				<br />
-			</div>
-    		<h2><?php _e('WordPress default plugin','wp_default_plugin') ?></h2>
-    		
-    		<?php if (isset($_POST)) :
-
-	        	//Let's save some options ...
-	        
-	            ?>
-	            <div id="setting-error-settings_updated" class="updated settings-error">
-					<p>
-						<strong><?php _e('Settings saved.')?></strong>
-					</p>
-				</div>
-	            
-			<?php endif;?>
-    		
-    		
-    		<form action="">
-	    		<table class="form-table">
-					<tbody>
-						<tr valign="top">
-							<th scope="row">
-								<label for=""><?php _e('A label','wp_default_plugin') ?></label><br />
-								<em><?php _e('In case you want some options ...','wp_default_plugin')?></em>
-							</th>
-							<td>
-								<input type="text" name="" id="" value="blablabla" />
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</form>
-    		
-    		<p class="submit">
-            	<input class="button-primary" name="plugin_ok" value="<?php _e('Save settings','wp_default_plugin') ?>" type="submit" />
-            </p>
-    		
-    	</div>
-    		
-    	<?php 
-    }
-    
 	/**
-	 * 
-	 * Get a plugin's specific option
-	 * @param string $option_name
-	 */
-    public static function get_option($option_name){
-    	return get_option('wp_default_plugin_'.$option_name);
-    }
-    
-    /**
-     * 
-     * Set a plugin's specific option
-     * @param unknown_type $option_name
-     */
-	public static function update_option($option_name,$option_value){
-    	return update_option('wp_default_plugin_'.$option_name,$option_value);
-    }
-    
-	/**
-     * 
-     * Delete a plugin's specific option
-     * @param string $option_name
-     */
-    public static function delete_option($option_name){
-    	return delete_option('wp_default_plugin_'.$option_name);
-    }
-    
-    /**
      * 
      * Usually, here, we set-up database tables or default options
      */

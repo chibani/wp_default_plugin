@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Default plugin\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp_default_plugin\n"
-"POT-Creation-Date: 2012-03-01 21:03:12+00:00\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-02 14:49+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: LoïcG <gerbaudloic@gmail.com>\n"
 "Language-Team: LoïcG <gerbaudloic@gmail.com>\n"
@@ -13,48 +13,38 @@ msgstr ""
 "Plural-Forms: nplurals=2;plural=n>2\n"
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
+"X-Poedit-KeywordsList: _(;_e(;esc_attr_e(\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin\n"
 
-#: wp_default_plugin.php:67
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+#: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin/wp_default_plugin_main_settings.php:15
+#: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin/wp_default_plugin_main_settings.php:24
+msgid "Default plugin settings"
+msgstr "Réglages du plugin par défaut"
 
-#: wp_default_plugin.php:83
-msgid "Settings saved."
-msgstr ""
-
-#: wp_default_plugin.php:95
-msgid "A label"
-msgstr "Un titre"
-
-#: wp_default_plugin.php:96
-msgid "In case you want some options ..."
-msgstr "Au cas où vous souhaiteriez quelques options ..."
-
-#: wp_default_plugin.php:107
-msgid "Save settings"
-msgstr "Enregister les paramètres"
-
-#: wp_default_plugin.php:167
-msgid "Every 10 minutes"
-msgstr "Toutes les 10 minutes"
-
-#. Plugin Name of the plugin/theme
-msgid "WordPress default plugin"
+#: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin/wp_default_plugin_main_settings.php:15
+#, fuzzy
+msgid "Default plugin"
 msgstr "Plugin par defaut pour WordPress"
 
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/chibani/wp_default_plugin"
-msgstr ""
+#: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin/wp_default_plugin_main_settings.php:30
+msgid "First option"
+msgstr "Première option"
 
-#. Description of the plugin/theme
-msgid "A base for making nice WordPress plugins"
-msgstr ""
+#: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin/wp_default_plugin_main_settings.php:32
+msgid "Second option"
+msgstr "Deuxième option"
 
-#. Author of the plugin/theme
-msgid "LoicG"
-msgstr ""
+#: /var/www/wordpress/wordpress/wp-content/plugins/wp_default_plugin/wp_default_plugin_main_settings.php:40
+msgid "This is our main section"
+msgstr "Voici notre section principale"
 
-#. Author URI of the plugin/theme
-msgid "http://blog.loicg.net/"
-msgstr ""
+#~ msgid "A label"
+#~ msgstr "Un titre"
+#~ msgid "In case you want some options ..."
+#~ msgstr "Au cas où vous souhaiteriez quelques options ..."
+#~ msgid "Save settings"
+#~ msgstr "Enregister les paramètres"
+#~ msgid "Every 10 minutes"
+#~ msgstr "Toutes les 10 minutes"
 

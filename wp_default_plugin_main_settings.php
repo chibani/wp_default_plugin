@@ -81,7 +81,7 @@ class wp_default_plugin_main_settings{
 	public static function get_option($option_name){
 		$options = get_option(get_class());
 		if(isset($options[$option_name]))
-			return $options[$option_name];
+			return esc_attr($options[$option_name]);
 		return false;
 	}
 }

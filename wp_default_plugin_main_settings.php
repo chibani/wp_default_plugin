@@ -12,7 +12,7 @@ class wp_default_plugin_main_settings{
 	 * Sets up the setting menu
 	 */
 	public static function admin_menu_setup(){
-		add_options_page(_('Default plugin settings','wp_default_plugin'), _('Default plugin','wp_default_plugin'), 'manage_options', 'wp_default_plugin_main_settings', array(get_class(),'admin_settings_page'));
+		add_options_page(__('Default plugin settings','wp_default_plugin'), __('Default plugin','wp_default_plugin'), 'manage_options', 'wp_default_plugin_main_settings', array(get_class(),'admin_settings_page'));
 	}
 	
 	/**
@@ -21,15 +21,15 @@ class wp_default_plugin_main_settings{
      */
     public static function admin_settings_setup(){
    		//Create a setting section
-    	add_settings_section('main_settings_section', _('Default plugin settings','wp_default_plugin'), array(get_class(),'main_section_callback'), 'wp_default_settings');
+    	add_settings_section('main_settings_section', __('Default plugin settings','wp_default_plugin'), array(get_class(),'main_section_callback'), 'wp_default_settings');
     	
     	//Register the settings
     	register_setting( get_class(), get_class() );
     	
     	//Create an option (field)
-    	add_settings_field('first_option', _('First option','wp_default_plugin'), array(get_class(),'first_option_callback'), 'wp_default_settings', 'main_settings_section');
+    	add_settings_field('first_option', __('First option','wp_default_plugin'), array(get_class(),'first_option_callback'), 'wp_default_settings', 'main_settings_section');
     	//And a second one :)
-    	add_settings_field('second_option', _('Second option','wp_default_plugin'), array(get_class(),'second_option_callback'), 'wp_default_settings', 'main_settings_section');
+    	add_settings_field('second_option', __('Second option','wp_default_plugin'), array(get_class(),'second_option_callback'), 'wp_default_settings', 'main_settings_section');
     }
 	
     /**
@@ -37,7 +37,7 @@ class wp_default_plugin_main_settings{
      * Echoes the first options section
      */
 	public static function main_section_callback(){
-		echo '<p>'._('This is our main section','wp_default_plugin').'</p>';
+		echo '<p>'.__('This is our main section','wp_default_plugin').'</p>';
 	}
 	
 	/**

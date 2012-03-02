@@ -24,7 +24,7 @@ class wp_default_plugin{
 	function init() {
 
 		//Setup the translation
-		load_plugin_textdomain(self::LANG,false, dirname(plugin_basename( __FILE__ ) ) . self::LANG);
+		load_plugin_textdomain(self::LANG,false, dirname(plugin_basename( __FILE__ ) ) . self::LANG_DIR);
 		
     	// admin actions and hooks
         if (is_admin()) {

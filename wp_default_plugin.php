@@ -14,7 +14,7 @@ add_action('init', array('wp_default_plugin', 'init'));
 
 class wp_default_plugin{
 	
-	const LANG = 'wp_default_plugin_lang'; // Defaut lang
+	const LANG = 'wp_default_plugin'; // Defaut lang
 	const LANG_DIR = '/lang/'; // Defaut lang dirctory
 	
 	/**
@@ -68,8 +68,8 @@ class wp_default_plugin{
 	*/
 	public static function admin_setting_update() {
 	
-	// nonce check
-	if ( !wp_verify_nonce( $_POST['_wpnonce'], plugin_basename( __FILE__ ) ) ) return;
+		// nonce check
+		if ( !wp_verify_nonce( $_POST['_wpnonce'], plugin_basename( __FILE__ ) ) ) return;
 	
 		$updated = false;
 		if (isset($_POST['plugin_ok'])) {
@@ -104,8 +104,7 @@ class wp_default_plugin{
   </h2>
   <?php if (isset($_POST['plugin_ok'])) {
 			self::admin_setting_update(); // update setting
-			//Let's save some options ...
-			} ?>
+	} ?>
   <form action="" method="post">
     <table class="form-table">
       <tbody>

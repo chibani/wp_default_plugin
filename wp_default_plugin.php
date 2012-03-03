@@ -41,11 +41,11 @@ class wp_default_plugin{
     	
     	//Javascript
     	/* /
-    	wp_enqueue_script('jquery-ui-datepicker', self::get_plugin_url() . '/js/jquery.ui.datepicker.min.js', array('jquery', 'jquery-ui-core') );
-		wp_enqueue_script('twitterfavs-admin-js', self::get_plugin_url() . '/js/admin.js', array('jquery-ui-datepicker') );
+    	wp_enqueue_script('jquery-ui-datepicker', plugins_url('/js/jquery.ui.datepicker.min.js',__FILE__), array('jquery', 'jquery-ui-core') );
+		wp_enqueue_script(get_class().'-admin-js', plugins_url('/js/admin.js',__FILE__), array('jquery-ui-datepicker') );
 		
 		//Smoothness style
-		wp_enqueue_style('jquery.ui.smoothness', self::get_plugin_url() . '/css/smoothness/jquery-ui-1.8.17.custom.css');
+		wp_enqueue_style('jquery.ui.smoothness', plugins_url('/css/smoothness/jquery-ui-1.8.17.custom.css',__FILE__));
 		/* */
     	
     }
@@ -79,13 +79,5 @@ class wp_default_plugin{
 		);
 		
 		return $schedules;
-	}
-
-	/**
-	 * 
-	 * get the plugin's path url
-	 */
-	public static function get_plugin_url(){
-		return get_bloginfo('url') . '/' . PLUGINDIR . '/' . dirname(plugin_basename(__FILE__));
 	}
 }

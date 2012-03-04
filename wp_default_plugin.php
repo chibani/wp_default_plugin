@@ -10,6 +10,8 @@ Author URI: http://blog.loicg.net/
 
 register_activation_hook(__FILE__, array('wp_default_plugin','plugin_activation'));
 register_deactivation_hook(__FILE__, array('wp_default_plugin','plugin_deactivation'));
+register_uninstall_hook(__FILE__, array('wp_default_plugin','plugin_uninstall'));
+
 add_action('init', array('wp_default_plugin', 'init'));
 
 class wp_default_plugin{
@@ -167,8 +169,16 @@ wp_nonce_field( plugin_basename( __FILE__ ), '_wpnonce' );?>
      * 
      * Purge cron and settings
      */
-    public static function plugin_desactivation(){
+    public static function plugin_deactivation(){
     	//Do something (remove cron...)
+    }
+    
+    /**
+     * 
+     * On plugin uninstallation
+     */
+    public static function plugin_uninstall(){
+    	//May we remove plugin's options ...
     }
     
 	/**

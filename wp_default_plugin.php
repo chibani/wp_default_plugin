@@ -14,7 +14,6 @@ add_action('init', array('wp_default_plugin', 'init'));
 
 class wp_default_plugin{
 	
-	const LANG = 'wp_default_plugin'; // Defaut lang
 	const LANG_DIR = '/lang/'; // Defaut lang dirctory
 	
 	/**
@@ -24,7 +23,7 @@ class wp_default_plugin{
 	function init() {
 
 		//Setup the translation
-		load_plugin_textdomain(self::LANG,false, dirname(plugin_basename( __FILE__ ) ) . self::LANG_DIR);
+		load_plugin_textdomain('wp_default_plugin',false, dirname(plugin_basename( __FILE__ ) ) . self::LANG_DIR);
 		
     	// admin actions and hooks
         if (is_admin()) {
@@ -60,7 +59,7 @@ class wp_default_plugin{
      * Set up the admin menu(s)
      */
     public static function admin_menu(){
-    	add_options_page("Default plugin admin page", __("Default plugin",self::LANG), 'manage_options', 'wp_default_plugin_settings', array('wp_default_plugin', "admin_settings"));
+    	add_options_page("Default plugin admin page", __("Default plugin",'wp_default_plugin'), 'manage_options', 'wp_default_plugin_settings', array('wp_default_plugin', "admin_settings"));
     }
     /**
 	*
@@ -79,11 +78,11 @@ class wp_default_plugin{
 	
 		if ($updated) {
 			echo '<div id="message" class="updated fade">';
-			echo '<p>'.__('Settings successfully updated.', self::LANG).'</p>';
+			echo '<p>'.__('Settings successfully updated.', 'wp_default_plugin').'</p>';
 			echo '</div>';
 		} else {
 			echo '<div id="message" class="error fade">';
-			echo '<p>'.__('Unable to update settings.', self::LANG).'</p>';
+			echo '<p>'.__('Unable to update settings.', 'wp_default_plugin').'</p>';
 			echo '</div>';
 		}
 	}
@@ -93,14 +92,14 @@ class wp_default_plugin{
      */
     public static function admin_settings(){
    		if (!current_user_can('manage_options'))  {
-			wp_die( __('You do not have sufficient permissions to access this page.',self::LANG) );
+			wp_die( __('You do not have sufficient permissions to access this page.','wp_default_plugin') );
 		}
 		?>
 
 <div class="wrap">
   <div id="icon-options-general" class="icon32"></div>
   <h2>
-    <?php _e('WordPress default plugin',self::LANG) ?>
+    <?php _e('WordPress default plugin','wp_default_plugin') ?>
   </h2>
   <?php if (isset($_POST['plugin_ok'])) {
 			self::admin_setting_update(); // update setting
@@ -110,18 +109,18 @@ class wp_default_plugin{
       <tbody>
         <tr valign="top">
           <th scope="row"> <label for="my_plugin_option">
-              <?php _e('A label',self::LANG) ?>
+              <?php _e('A label','wp_default_plugin') ?>
             </label>
             <br />
             <em>
-            <?php _e('In case you want some options ...',self::LANG)?>
+            <?php _e('In case you want some options ...','wp_default_plugin')?>
             </em> </th>
           <td><input type="text" name="my_plugin_option" id="my_plugin_option" value="<?php esc_attr_e( self::get_option('my_plugin_option' )); ?>" /></td>
         </tr>
       </tbody>
     </table>
     <p class="submit">
-      <input type="submit" class="button-primary" name="plugin_ok" value="<?php esc_attr_e('Save settings',self::LANG) ?>" />
+      <input type="submit" class="button-primary" name="plugin_ok" value="<?php esc_attr_e('Save settings','wp_default_plugin') ?>" />
     </p>
     <?php // Use nonce for verification
 wp_nonce_field( plugin_basename( __FILE__ ), '_wpnonce' );?>
@@ -184,7 +183,7 @@ wp_nonce_field( plugin_basename( __FILE__ ), '_wpnonce' );?>
 		//10 minutes, mainly for tests
 		$schedules['10min'] = array(
 			'interval'   => 60*10,// in seconds
-			'display'   => __('Every 10 minutes',self::LANG), 
+			'display'   => __('Every 10 minutes','wp_default_plugin'), 
 		);
 		
 		return $schedules;

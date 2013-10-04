@@ -23,7 +23,7 @@ class wp_default_plugin{
 	 * 
 	 * The main 'loader'
 	 */
-	function init() {
+	public static function init() {
 
 		//Setup the translation
 		load_plugin_textdomain(self::LANG_DOMAIN,false, dirname(plugin_basename( __FILE__ ) ) . self::LANG_DIR);
